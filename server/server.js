@@ -12,8 +12,8 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser());
 app.use(errorHandle);
 app.use(kjwt({ secret: config.get('jwtSecret') }).unless({
-    path: [/\/users\/login/, /\/users\/register/, /\/admin\/login/]
-})).use(router.routes());
+    path: [/\/users\/login/, /\/users\/register/] 
+})).use(router.routes());//@todo: add more excluding URL option
 
 
 app.listen(PORT, () => {console.log('running on {$PORT}')});

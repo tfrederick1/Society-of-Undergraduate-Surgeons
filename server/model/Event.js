@@ -5,12 +5,19 @@ const EventSchema = mongoose.Schema({
         required: true
     },
     status: {
-        type: {String, enum : ["Passed", "Ongoing", "Upcoming"]},
+        type: {String, enum : ["Eneded", "Ongoing", "Upcoming"]},
         required: true
     },
     description: {
         type: String,
         required: true
+    },
+    date: {
+        type: Date,
+        required: true
+    },
+    location: {
+        type: String
     }
 })
 

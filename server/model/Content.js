@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 const ContentSchema = mongoose.Schema({
-   title: {
+   pageID: {
+       type: Number,
+       required: true
+   },
+    title: {
        type: String,
        required: true
    },

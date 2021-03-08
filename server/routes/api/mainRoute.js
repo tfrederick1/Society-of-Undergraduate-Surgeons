@@ -1,10 +1,10 @@
 const router = require('koa-router')();
-const index = require('./indexRoute');
+const index = require('./clientRoute');
 const admin = require('./adminRoute');
 const user = require('./userRoute');
 
 router.use(index.routes(), index.allowedMethods());
-router.use(admin.routes(), admin.allowedMethods());
+router.use(user.routes(), admin.allowedMethods());
 
 
 module.exports = router;
