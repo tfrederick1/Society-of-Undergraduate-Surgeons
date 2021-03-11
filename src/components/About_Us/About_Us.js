@@ -3,7 +3,9 @@ import React from 'react';
 export default function About_Us() {
     return (
         <div>
-            <h1>About Us</h1>
+            <div class="transbox">
+                <h1>About Us</h1>
+            </div>
             <div class="flex-container-body">
                 <div>
                     <p>
