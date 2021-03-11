@@ -7,13 +7,48 @@ import Home from './components/Home/Home';
 function App() {
     return (
         <div className="wrapper">
+            <div class="flex-container-header">
+                <div class="wrap">
+                    <h1> Gators Society of Undergraduate Surgeons </h1>
+                    <h2> -Add text about mission statement. The rest of this is just filler to test what happens when it needs to wrap.-</h2>
+                </div>
+            </div>
+
+            <div class="flex-container-bar">
+                <div class="flex-container-helper">
+                    <div class="dropdown">
+                        <button class="drop-button">
+                            <a href="/">Home</a>
+                        </button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="drop-button">
+                            <a href="/About-Us">About Us</a>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Placeholder 1</a>
+                            <a href="#">Placeholder 2</a>
+                            <a href="#">Placeholder 3</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="drop-button">
+                            <a href="/Outreach">Outreach</a>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Placeholder 1</a>
+                            <a href="#">Placeholder 2</a>
+                            <a href="#">Placeholder 3</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="drop-button">
+                            <a href="/Calendar">Calendar</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
             <BrowserRouter>
-                <nav>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/About-Us">About Us</a></li>
-                    </ul>
-                </nav>
                 <Switch>
                     <Route path="/About-Us">
                         <About_Us />
@@ -28,15 +63,3 @@ function App() {
 }
 
 export default App;
-
-/*
-<div className="wrapper">
-    <BrowserRouter>
-        <Switch>
-            <Route path="/">
-                <About_Us />
-            </Route>
-        </Switch>
-    </BrowserRouter>
-</div>
-*/
