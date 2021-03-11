@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React App</title>
 
     <!-- IMPORTANT: margin-left for
@@ -11,8 +11,6 @@
         h2
         should be set to the same value for the best results :)
         -->
-    
-    
     <!-- Anything in the Header (Should be Title and subtitle)-->
     <style>
         .flex-container-header {
@@ -22,9 +20,11 @@
         }
 
             .flex-container-header > div {
-                margin-top: 50px;
-                line-height: 5px;
             }
+
+        div.wrap {
+            word-wrap = break-word;
+        }
     </style>
 
     <!-- Anything in the nav-bar-->
@@ -88,9 +88,9 @@
                 text-align: left;
             }
 
-                .dropdown-content a:hover {
-                    background-color: #ddd;
-                }
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
 
         .dropdown:hover .dropdown-content {
             display: block;
@@ -98,6 +98,18 @@
 
         .dropdown:hover .drop-button {
             background-color: #3D3D3D;
+        }
+
+
+        /* For when the screen gets smol :) */
+        @media screen and (max-width: 1200px) {
+            .flex-container-helper {
+                margin-left: 25px;
+            }
+
+            .dropdown .drop-button {
+                padding: 14px 8px;
+            }
         }
     </style>
 
@@ -108,7 +120,9 @@
             background-color: #f1f1f1;
             flex-direction: column;
             margin-top: 25px;
-            margin-right: 500px;
+            min-width = 100px;
+            max-width = 500px;
+            margin-right: 100px;
             margin-left: 100px;
             justify-content: left;
         }
@@ -117,6 +131,14 @@
                 margin: 5px;
                 line-height: 20px;
             }
+
+        /* For when the screen gets smol :) */
+        @media screen and (max-width: 1200px) {
+            .flex-container-body {
+                margin-right: 25px;
+                margin-left: 25px;
+            }
+        }
     </style>
 
     <!-- Miscellaneous Formatting-->
@@ -129,13 +151,13 @@
             margin-left: 100px;
             color: #222222;
             font-family: Verdana;
-            font-size: 300%;
+            font-size: 250%;
         }
 
         h2 {
             margin-left: 100px;
             margin-top: 5px;
-            margin-bottom: 50px;
+            margin-bottom: 5px;
             color: #222222;
             font-family: Verdana;
             font-size: 100%;
@@ -145,6 +167,19 @@
             margin: 25px;
             color: #222222;
         }
+
+        /* For when the screen gets smol :) */
+        @media screen and (max-width: 1200px) {
+            h1 {
+                margin-left: 25px;
+                font-size: 200%;
+            }
+
+            h2 {
+                margin-left: 25px;
+                font-size: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -152,9 +187,9 @@
 <body>
     <!--Header Information-->
     <div class="flex-container-header">
-        <div>
+        <div class="wrap">
             <h1> Gators Society of Undergraduate Surgeons </h1>
-            <h2> -Add text about mission statement-</h2>
+            <h2> -Add text about mission statement. The rest of this is just filler to test what happens when it needs to wrap.-</h2>
         </div>
     </div>
     
