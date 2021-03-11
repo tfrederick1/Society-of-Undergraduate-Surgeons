@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import About_Us from './components/About_Us/About_Us';
 import Home from './components/Home/Home';
+import Outreach from './components/Outreach/Outreach';
 
 function App() {
     return (
@@ -52,6 +53,9 @@ function App() {
                 <Switch>
                     <Route path="/About-Us">
                         <About_Us />
+                    </Route>
+                    <Route path="/Outreach">
+                        <Outreach />
                     </Route>
                     <Route path="/">
                         <Home />
