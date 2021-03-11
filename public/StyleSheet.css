@@ -136,10 +136,11 @@ div.wrap {
 	background-color: #f1f1f1;
 	flex-direction: column;
 	margin-top: 25px;
-	min-width = 100px;
-	max-width = 500px;
+	min-width: 100px;
+	max-width: 900px;
 	margin-right: 100px;
 	margin-left: 100px;
+	margin-bottom: 25px;
 	justify-content: left;
 }
 
