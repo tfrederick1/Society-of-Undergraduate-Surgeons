@@ -109,12 +109,11 @@ div.wrap {
 	margin-top: 20px;
 	margin-left: 100px;
 	margin-right: 100px;
-	background-color: #ffffff;
-	opacity: 0.6;
+	background-color: rgba(237, 247, 255, .6);
 }
 
 .transbox h1 {
-	color: #222222;
+	color: #4f4f4f;
 	margin-left: 25px;
 	font-family: Verdana;
 	font-size: 350%;
@@ -125,8 +124,6 @@ div.wrap {
 		margin-top: 10px;
 		margin-left: 25px;
 		margin-right: 25px;
-		background-color: #ffffff;
-		opacity: 0.6;
 	}
 }
 
@@ -145,8 +142,28 @@ div.wrap {
 }
 
 .flex-container-body > div {
-	margin: 5px;
+	margin-bottom: 25px;
 	line-height: 20px;
+	overflow: auto;
+}
+
+.flex-container-body h1 {
+	margin-left: 25px;
+	color: #4f4f4f;
+}
+
+.flex-container-body h2 {
+	display: block;
+	margin-left: 25px;
+	color: #4f4f4f;
+	font-size: 150%;
+}
+
+.flex-container-body img {
+	float: left;
+	max-width: 25%;
+	height: auto;
+	margin-right: 10px;
 }
 
 /* For when the screen gets smol :) */
@@ -179,7 +196,8 @@ h2 {
 }
 
 p {
-	margin: 25px;
+	display: block;
+	margin-left: 25px;
 	color: #222222;
 }
 
