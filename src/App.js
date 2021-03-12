@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import About_Us from './components/About_Us/About_Us';
+import Board_Members from './components/About_Us/Board_Members';
 import Home from './components/Home/Home';
 import Outreach from './components/Outreach/Outreach';
 
@@ -27,7 +28,7 @@ function App() {
                             <a href="/About-Us">About Us</a>
                         </button>
                         <div class="dropdown-content">
-                            <a href="#">Placeholder 1</a>
+                            <a href="/About-Us/Board-Members">Board Members</a>
                             <a href="#">Placeholder 2</a>
                             <a href="#">Placeholder 3</a>
                         </div>
@@ -51,6 +52,9 @@ function App() {
             </div>
             <BrowserRouter>
                 <Switch>
+                    <Route path="/About-Us/Board-Members">
+                        <Board_Members />
+                    </Route>
                     <Route path="/About-Us">
                         <About_Us />
                     </Route>
