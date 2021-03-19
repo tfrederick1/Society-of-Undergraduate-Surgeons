@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import About_Us from './components/About_Us/About_Us';
 import Board_Members from './components/About_Us/Board_Members';
+import Sponsors from './components/About_Us/Sponsors';
+import Contact_Us from './components/About_Us/Contact_Us';
 import Home from './components/Home/Home';
 import Outreach from './components/Outreach/Outreach';
 
@@ -29,8 +31,8 @@ function App() {
                         </button>
                         <div class="dropdown-content">
                             <a href="/About-Us/Board-Members">Board Members</a>
-                            <a href="#">Placeholder 2</a>
-                            <a href="#">Placeholder 3</a>
+                            <a href="/About-Us/Sponsors">Sponsors</a>
+                            <a href="/About-Us/Contact-Us">Contact Us</a>
                         </div>
                     </div>
                     <div class="dropdown">
@@ -54,6 +56,12 @@ function App() {
                 <Switch>
                     <Route path="/About-Us/Board-Members">
                         <Board_Members />
+                    </Route>
+                    <Route path='/About-Us/Sponsors'>
+                        <Sponsors />
+                    </Route>
+                    <Route path='/About-Us/Contact-Us'>
+                        <Contact_Us />
                     </Route>
                     <Route path="/About-Us">
                         <About_Us />
