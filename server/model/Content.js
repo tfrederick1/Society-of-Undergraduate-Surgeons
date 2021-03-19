@@ -17,8 +17,7 @@ const ContentSchema = mongoose.Schema({
         ref: 'user'
    },
    postTime: {
-       type: Date,
-       required: true
+       type: Date
    }
 })
 

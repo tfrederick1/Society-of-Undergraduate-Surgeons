@@ -18,7 +18,11 @@ const EventSchema = mongoose.Schema({
     },
     location: {
         type: String
+    },
+    time: {
+        type: String
     }
+
 })
 
 module.exports = ClubEvent = mongoose.model("event", EventSchema);

@@ -1,8 +1,8 @@
 const router = require('koa-router')();
+const controller = require('../../controller/user/index');
 
 
 router.prefix('/user');
-//todo(maybe): add user controller to the user route
-
-
+router.post('/addMember', controller.postMember);
+router.post("/addEvent", controller.postEvent);
 module.exports = router;

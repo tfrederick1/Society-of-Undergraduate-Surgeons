@@ -12,6 +12,10 @@ const MemberSchema = new mongoose.Schema({
     position: {
         type: String,
         required: true
+    },
+    avatar: {
+        data: Buffer,
+        contentType: String
     }
 });
 
