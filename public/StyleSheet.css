@@ -97,11 +97,14 @@ div.wrap {
 	margin-top: 20px;
 	margin-left: 100px;
 	margin-right: 100px;
+	margin-bottom: 0px;
 	background-color: rgba(237, 247, 255, .6);
 }
 
 .transbox h1 {
 	color: #4f4f4f;
+	margin-bottom: unset;
+	margin-top: unset;
 	margin-left: 25px;
 	font-family: Verdana;
 	font-size: 350%;
@@ -113,7 +116,7 @@ div.wrap {
 	flex-shrink: 1;
 	float: left;
 	background-color: #f1f1f1;
-	flex-direction: row;
+	flex-direction: column;
 	margin-top: 25px;
 	width: 60%;
 	margin-right: 25px;

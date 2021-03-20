@@ -52,6 +52,7 @@ function App() {
                     </div>
                 </div>
             </div>
+
             <BrowserRouter>
                 <Switch>
                     <Route path="/About-Us/Board-Members">
@@ -74,6 +75,13 @@ function App() {
                     </Route>
                 </Switch>
             </BrowserRouter>
+
+            <div class='flex-container-event'>
+                <div>
+                    <h1>Upcoming Events</h1>
+                    <p>This is just a test to figure out what this looks like. Figure out how to pull information from google calendar.</p>
+                </div>
+            </div>
         </div>
     );
 }
