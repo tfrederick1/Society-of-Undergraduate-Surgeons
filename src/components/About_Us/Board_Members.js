@@ -44,7 +44,8 @@ export default function Board_Members() {
                         nunc vel risus commodo. Sagittis nisl rhoncus mattis rhoncus urna neque viverra. Rhoncus mattis rhoncus urna neque viverra.
                         Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum.
                     </p>
-                </div><div>
+                </div>
+                <div>
                     <h2>Position 4</h2>
                     <p>
                         <img src={Test_Image} alt='Test Image' />

@@ -92,18 +92,6 @@ div.wrap {
 	background-color: #3D3D3D;
 }
 
-
-/* For when the screen gets smol :) */
-@media screen and (max-width: 1200px) {
-	.flex-container-helper {
-		margin-left: 25px;
-	}
-
-	.dropdown .drop-button {
-		padding: 14px 8px;
-	}
-}
-
 /* Secondary Header Box for anything but the homepage */
 .transbox {
 	margin-top: 20px;
@@ -119,26 +107,20 @@ div.wrap {
 	font-size: 350%;
 }
 
-@media screen and (max-width: 1200px) {
-	.transbox {
-		margin-top: 10px;
-		margin-left: 25px;
-		margin-right: 25px;
-	}
-}
-
-/* Anything in the body (Should be the main paragraph) */
+/* Anything in the body (Should be the main paragraph and possibly images) */
 .flex-container-body {
 	display: flex;
+	flex-shrink: 1;
+	float: left;
 	background-color: #f1f1f1;
-	flex-direction: column;
+	flex-direction: row;
 	margin-top: 25px;
-	min-width: 100px;
-	max-width: 900px;
-	margin-right: 100px;
+	width: 60%;
+	margin-right: 25px;
 	margin-left: 100px;
 	margin-bottom: 25px;
 	justify-content: left;
+	flex: 2 1 auto;
 }
 
 .flex-container-body > div {
@@ -161,17 +143,34 @@ div.wrap {
 
 .flex-container-body img {
 	float: left;
-	max-width: 25%;
-	height: auto;
+	width: 250px;
 	margin-right: 10px;
 }
 
-/* For when the screen gets smol :) */
-@media screen and (max-width: 1200px) {
-	.flex-container-body {
-		margin-right: 25px;
-		margin-left: 25px;
-	}
+/* Upcoming Events Box */
+.flex-container-event {
+	float: left;
+	width: 300px;
+	background-color: #f1f1f1;
+	margin-top: 25px;
+}
+
+.flex-container-event > div {
+	line-height: 20px;
+	overflow: auto;
+	width: auto;
+}
+
+.flex-container-event h1 {
+	font-size: 150%;
+	margin-left: unset;
+	padding-left: 25px;
+	padding-right: 25px;
+	color: #4f4f4f;
+}
+
+.flex-container-event p {
+	
 }
 
 /* Miscellaneous Formatting */
@@ -198,11 +197,31 @@ h2 {
 p {
 	display: block;
 	margin-left: 25px;
+	margin-right: 15px;
 	color: #222222;
 }
 
 /* For when the screen gets smol :) */
 @media screen and (max-width: 1200px) {
+	.flex-container-helper {
+		margin-left: 25px;
+	}
+
+	.dropdown .drop-button {
+		padding: 14px 8px;
+	}
+	
+	.transbox {
+		margin-top: 10px;
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+
+	.flex-container-body {
+		margin-right: 25px;
+		margin-left: 25px;
+	}
+	
 	h1 {
 		margin-left: 25px;
 		font-size: 200%;
@@ -211,5 +230,35 @@ p {
 	h2 {
 		margin-left: 25px;
 		font-size: 100%;
+	}
+
+	.flex-container-event {
+		width: 30%;
+	}
+}
+
+@media screen and (max-width: 880px) {
+	.flex-container-body {
+		width:unset;
+	}
+
+	.flex-container-event {
+		width: unset;
+		margin-left: 25px;
+		margin-right: 25px;
+		margin-bottom: 25px;
+	}
+
+@media screen and (max-width: 600px) {
+	.transbox h1 {
+		text-align: center;
+	}
+
+	.flex-container-body img {
+		width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+		float: unset;
+		display: block;
 	}
 }
