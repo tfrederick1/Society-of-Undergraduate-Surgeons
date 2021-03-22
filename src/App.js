@@ -58,7 +58,7 @@ class App extends Component {
 
                 <BrowserRouter>
                     <Switch>
-                        <Route path="/About-Us/Board-Members">
+                        <Route path='/About-Us/Board-Members'>
                             <Board_Members />
                             <div class='flex-container-event'>
                                 <div>

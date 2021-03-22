@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Board_Members extends React.Component {
+export default class About_Us extends React.Component {
     render() {
         return (
             <div>
