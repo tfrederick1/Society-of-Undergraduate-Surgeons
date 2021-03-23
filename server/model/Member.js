@@ -13,6 +13,10 @@ const MemberSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    description: {
+        type: String,
+        required: true
+    },
     avatar: {
         data: Buffer,
         contentType: String

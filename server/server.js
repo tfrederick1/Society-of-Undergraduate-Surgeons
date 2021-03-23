@@ -1,6 +1,7 @@
 const koa = require('koa2');
 const kjwt = require('koa-jwt');
 const bodyParser = require('koa-bodyparser');
+const cors = require('cors');
 const errorHandle = require('./middleware/errorHandle');
 const config = require('config');
 const connectDB = require('./config/db');
@@ -10,6 +11,7 @@ app = new koa();
 connectDB();
 const PORT = process.env.PORT || 5000;
 app.use(bodyParser());
+//app.use(cors);
 app.use(errorHandle);
 app.use(router.routes());
 /*app.use(kjwt({ secret: config.get('jwtSecret') }).unless({

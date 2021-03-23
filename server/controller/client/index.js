@@ -5,16 +5,17 @@ const Event = require("../../model/Event");
 
 fn_getPage = async (ctx, next) => {
     try {
-        let nextEvent = await fn_getEvent(ctx);
+        let nextEvent = fn_getEvent(ctx);
         const params = ctx.request.query;
         if(params && params.pageID == 3) {
             const members = await fn_getMembers(ctx);
             if(members) {
+                ctx.response.status = 200;
                 const data = {
                     members: members,
                     event: nextEvent
                 }
-                return ctx.body = {data};
+                return ctx.body = data;
             }
         }else if(params.pageID == 4) {
             //TODO: implement and add calendar controller
@@ -54,8 +55,17 @@ fn_getContent = async (ctx) => {
 
 fn_syncEvent = async (ctx) => {
     try {    
-        await Event.updateMany({status: "Upcoming"|"Ongoing", date: {$lt: Date.now()}}, {$set: {status: "Ended"}});
-        await Event.updateMany({status: "Upcoming", date: Date.now()}, {$set: {status: "Ongoing"}});
+        await Event.updateMany({status: "Upcoming"|"Ongoing", date: {$lt: Date.now()}}, {$set: {status: "Ended"}}, 
+            (err, doc) => {
+                if(err) console.log(err);
+                console.log(doc);
+        });
+        await Event.updateMany({status: "Upcoming", date: Date.now()}, {$set: {status: "Ongoing"}}, 
+            (err, doc) => {
+                if(err) console.log(err);
+                console.log(doc)
+            }
+        );
     }catch(err) {
         console.error(err.message);
         ctx.response.status = err.status || 500;
