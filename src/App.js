@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import About_Us from './components/About_Us/About_Us';
-import Board_Members from './components/About_Us/Board_Members';
-import Sponsors from './components/About_Us/Sponsors';
-import Contact_Us from './components/About_Us/Contact_Us';
-import Home from './components/Home/Home';
-import Outreach from './components/Outreach/Outreach';
+import About_Us from './pages/About_Us/About_Us';
+import Board_Members from './pages/About_Us/Board_Members';
+import Sponsors from './pages/About_Us/Sponsors';
+import Contact_Us from './pages/About_Us/Contact_Us';
+import Home from './pages/Home/Home';
+import Outreach from './pages/Outreach/Outreach';
 
 function App() {
     return (
