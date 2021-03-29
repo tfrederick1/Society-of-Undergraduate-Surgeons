@@ -140,7 +140,7 @@ fn_postMember = async (ctx, next) => {
     }
 }
 
-fn_postContent = async (ctx, next) {
+fn_postContent = async (ctx, next) => {
     const request = ctx.request.body;
     const {pageID, title, pageContent} = request;
     const images = ctx.request.files.file;
