@@ -8,17 +8,11 @@ const ContentSchema = mongoose.Schema({
        type: String,
        required: true
    },
-   content: {
+   pageContent: {
         type: String,
         required: true
    },
-   author: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'user'
-   },
-   postTime: {
-       type: Date
-   }
+   imgPaths: [String]
 })
 
 module.exports = Content = mongoose.model('content', ContentSchema);

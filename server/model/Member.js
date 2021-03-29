@@ -18,8 +18,8 @@ const MemberSchema = new mongoose.Schema({
         required: true
     },
     avatar: {
-        data: Buffer,
-        contentType: String
+        type: String,
+        required: true
     }
 });
 
