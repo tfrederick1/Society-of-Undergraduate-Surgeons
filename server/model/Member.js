@@ -13,7 +13,7 @@ const MemberSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    description: {
+    bio: {
         type: String,
         required: true
     },

@@ -9,7 +9,7 @@ const ContentSchema = mongoose.Schema({
        required: true
    },
    pageContent: {
-        type: String,
+        content: [String],
         required: true
    },
    imgPaths: [String]

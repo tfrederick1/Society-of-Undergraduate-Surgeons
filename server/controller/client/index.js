@@ -14,20 +14,17 @@ fn_getPage = async (ctx, next) => {
                 }
                 return ctx.body = data;
             }
+        }else {
+            let pageContent = await fn_getContent(ctx, next);
+            if(!pageContent) {
+                ctx.response.message = "No content found. ";
+                ctx.response.status = 404;
+            }
+            const data = {
+                pageContent
+            };
+            return ctx.body = {data};
         }
-        let pageContent = await fn_getContent(ctx, next);
-        const data = {
-            event: nextEvent
-        }
-        if(!pageContent) {
-            ctx.response.message = "No content found. ";
-            ctx.response.status = 404;
-        }
-        if(!nextEvent) {
-            ctx.response.message = ctx.response.message + "No upcoming event found";
-        }
-        await next();
-        return ctx.body = {data};
     }catch(err) {
         console.error(err.message);
         ctx.response.status = err.status || 500;

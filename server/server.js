@@ -20,7 +20,6 @@ app.use(koaBody({
     }
 }));
 app.use(errorHandle);
-app.use(router.routes());
 app.use(kjwt({ secret: config.get('jwtSecret') }).unless({
     path: (ctx) => {
         if(jwtUnless.checkisNonTokenApi(ctx)) {
