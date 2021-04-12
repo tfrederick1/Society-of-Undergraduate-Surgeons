@@ -7,6 +7,7 @@ import Sponsors from './pages/About_Us/Sponsors';
 import Contact_Us from './pages/About_Us/Contact_Us';
 import Home from './pages/Home/Home';
 import Outreach from './pages/Outreach/Outreach';
+import Calendar from './pages/Calendar/Calendar';
 
 function App() {
     return (
@@ -69,6 +70,9 @@ function App() {
                     </Route>
                     <Route path="/Outreach">
                         <Outreach />
+                    </Route>
+                    <Route path="/Calendar">
+                        <Calendar />
                     </Route>
                     <Route path="/">
                         <Home />
