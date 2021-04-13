@@ -193,7 +193,6 @@ class App extends Component {
                         </div>
                     </div>
                 </div>
-    
                 <BrowserRouter>
                     <Switch>
                         <Route path="/About-Us/Board-Members">
@@ -229,8 +228,7 @@ class App extends Component {
                             {this.state.isEmpty && emptyState}
                         </div>
                     </div>
-                </div>
-            </div>
+               </div>
         );
     }
 }
