@@ -43,5 +43,5 @@
   },
   "devDependencies": {
     "eslint": "^7.21.0"
-  },
+  }
 }
