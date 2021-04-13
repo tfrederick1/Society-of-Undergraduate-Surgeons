@@ -1,1 +1,10 @@
-node_modules/
+ node_modules/
+src/App.test.js
+src/App.css
+src/logo.svg
+src/index.css
+src/setupTests.js
+src/reportWebVitals.js
+public/logo512.png
+public/logo192.png
+public/favicon.ico 
