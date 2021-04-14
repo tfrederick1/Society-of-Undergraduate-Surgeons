@@ -55,8 +55,8 @@ class App extends Component {
                 let events = response.result.items;
                 let sortedEvents = events.sort(function(a, b) {
                   return (
-                    moment(b.start.dateTime).format("YYYYMMDD") -
-                    moment(a.start.dateTime).format("YYYYMMDD")
+                    moment(a.start.dateTime).format("YYYYMMDD") -
+                    moment(b.start.dateTime).format("YYYYMMDD")
                   );
                 });
                 if (events.length > 0) {
@@ -127,7 +127,7 @@ class App extends Component {
                     target="_blank"
                     key={event.id}
                 >
-                    {event.summary}{" "}
+                    {event.summary}{" - "}
                     <span className="badge">
                         {moment(event.start.dateTime).format("h:mm a")},{" "}
                         {moment(event.start.dateTime).format("MMMM Do")}{" "}
@@ -138,9 +138,9 @@ class App extends Component {
 
         let emptyState = (
             <div className="empty">
-                <h3>
+                <p>
                     No upcoming events for the month.
-                </h3>
+                </p>
             </div>
         );
 
@@ -193,6 +193,7 @@ class App extends Component {
                         </div>
                     </div>
                 </div>
+    
                 <BrowserRouter>
                     <Switch>
                         <Route path="/About-Us/Board-Members">
@@ -228,7 +229,7 @@ class App extends Component {
                             {this.state.isEmpty && emptyState}
                         </div>
                     </div>
-               </div>
+                </div>
             </div>
         );
     }
