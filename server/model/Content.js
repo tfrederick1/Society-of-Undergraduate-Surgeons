@@ -4,9 +4,13 @@ const ContentSchema = mongoose.Schema({
        type: Number,
        required: true
    },
-    title: {
+   title: {
        type: String,
-       required: true
+       required: false
+   },
+   subtitle: {
+      type: String,
+      required: false
    },
    pageContent: {
         content: [String],
