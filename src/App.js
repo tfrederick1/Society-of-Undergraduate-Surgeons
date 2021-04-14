@@ -10,6 +10,9 @@ import Sponsors from './pages/About_Us/Sponsors';
 import Contact_Us from './pages/About_Us/Contact_Us';
 import Home from './pages/Home/Home';
 import Outreach from './pages/Outreach/Outreach';
+import For_Teachers from './pages/Outreach/For_Teachers';
+import For_Students from './pages/Outreach/For_Students';
+import Miscellaneous from './pages/Outreach/Miscellaneous';
 import Calendar from './pages/Calendar/Calendar';
 
 var gapi = window.gapi;
@@ -181,9 +184,9 @@ class App extends Component {
                                 <a href="/Outreach">Outreach</a>
                             </button>
                             <div class="dropdown-content">
-                                <a href="#">Placeholder 1</a>
-                                <a href="#">Placeholder 2</a>
-                                <a href="#">Placeholder 3</a>
+                                <a href="/Outreach/For-Teachers">For Teachers</a>
+                                <a href="/Outreach/For-Students">For Students</a>
+                                <a href="/Outreach/Miscellaneous">Miscellaneous</a>
                             </div>
                         </div>
                         <div class="dropdown">
@@ -207,6 +210,15 @@ class App extends Component {
                         </Route>
                         <Route path="/About-Us">
                             <About_Us />
+                        </Route>
+                        <Route path="/Outreach/For-Teachers">
+                            <For_Teachers />
+                        </Route>
+                        <Route path="/Outreach/For-Students">
+                            <For_Students />
+                        </Route>
+                        <Route path="/Outreach/Miscellaneous">
+                            <Miscellaneous />
                         </Route>
                         <Route path="/Outreach">
                             <Outreach />

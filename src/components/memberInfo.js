@@ -11,8 +11,7 @@ export default class memberInfo extends React.Component {
             this.props.members.map((member, key) => {
                 return (
                     <div key = {key}>
-                        <h2>{member.name}</h2>
-                        <h2>{member.position}</h2>
+                        <h2>{member.name}{": "}{member.position}</h2>
                         <p>
                             <img src={Test_Image} alt='Test Image' />
                             {member.description}
