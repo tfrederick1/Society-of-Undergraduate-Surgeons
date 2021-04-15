@@ -205,8 +205,8 @@ fn_updateContent = async (ctx, next) => {
         const request = ctx.request.body;
         const {pageID, pageContent, imgUpdate, conUpdate} = request;
         
-        const images;
-        const imgPaths;
+        let images;
+        let imgPaths;
         if(imgUpdate) {
             images = ctx.request.files.file;
             imgPaths = [];

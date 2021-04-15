@@ -12,10 +12,7 @@ const ContentSchema = mongoose.Schema({
       type: String,
       required: false
    },
-   pageContent: {
-        content: [String],
-        required: true
-   },
+   pageContent: [String],
    imgPaths: [String]
 })
 

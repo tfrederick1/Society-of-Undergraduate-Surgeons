@@ -20,10 +20,8 @@ fn_getPage = async (ctx, next) => {
                 ctx.response.message = "No content found. ";
                 ctx.response.status = 404;
             }
-            const data = {
-                pageContent
-            };
-            return ctx.body = {data};
+            const data = pageContent;
+            return ctx.body = data;
         }
     }catch(err) {
         console.error(err.message);

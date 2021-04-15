@@ -22,6 +22,7 @@
     "koa-session": "^6.1.0",
     "koa-static": "^5.0.0",
     "koa2": "^2.0.0-alpha.7",
+    "koa2-cors": "^2.0.6",
     "mongoose": "^5.11.18",
     "request": "^2.88.2"
   },
