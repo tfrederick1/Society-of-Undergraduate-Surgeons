@@ -1,6 +1,35 @@
 import React from 'react';
 
 export default class For_Teachers extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            content: [],
+            title: "",
+            imgPaths: [],
+            isLoaded: false
+        }
+        this.getMember = this.getMember.bind(this);
+    }
+
+    async getContent() {
+        let promise = await axios.get('/api/Outreach/Teacher', {params: {pageID: 8}});
+        let status = promise.status;
+        if(status === 200) {
+            console.log("confirm");
+            let data = promise.data;
+            this.setState({
+                content: data.pageContent,
+                title: data.title,
+                imgPath: data.imgPaths,
+                isLoaded: true
+            })
+        }
+    }
+
+    componentDidMount() {
+        this.getContent();
+    }
     render() {
         return (
             <div>

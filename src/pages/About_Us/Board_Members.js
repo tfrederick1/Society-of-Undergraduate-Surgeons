@@ -15,7 +15,7 @@ export default class Board_Members extends React.Component {
     }
 
     async getMember() {
-        let promise = await axios.get('/About', {params: {pageID: 3}});
+        let promise = await axios.get('/api/Member', {params: {pageID: 3}});
         let status = promise.status;
         if(status === 200) {
             console.log("confirm");
