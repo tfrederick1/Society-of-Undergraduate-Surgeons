@@ -1,0 +1,33 @@
+{
+  "name": "surgenserver",
+  "version": "1.0.0",
+  "description": "backend server for society of future surgeon",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server"
+  },
+  "author": "Xuanting Liu",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.4",
+    "cors": "^2.8.5",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa-body": "^4.2.0",
+    "koa-bodyparser": "4.3.0",
+    "koa-jwt": "^4.0.0",
+    "koa-router": "^10.0.0",
+    "koa-session": "^6.1.0",
+    "koa-static": "^5.0.0",
+    "koa2": "^2.0.0-alpha.7",
+    "koa2-cors": "^2.0.6",
+    "mongoose": "^5.11.18",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7"
+  }
+}
