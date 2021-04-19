@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 export default class Board_Members extends React.Component {
     constructor(props) {
@@ -9,7 +10,7 @@ export default class Board_Members extends React.Component {
             imgPaths: [],
             isLoaded: false
         }
-        this.getMember = this.getMember.bind(this);
+        this.getContent = this.getContent.bind(this);
     }
 
     async getContent() {
@@ -34,7 +35,7 @@ export default class Board_Members extends React.Component {
         return (
             <div>
                 <div class="transbox">
-                    <h1>About Us</h1>
+                    <h1>{this.state.title}</h1>
                 </div>
                 <div class="flex-container-body">
                     <div>

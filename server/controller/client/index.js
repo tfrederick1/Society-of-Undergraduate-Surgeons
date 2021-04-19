@@ -33,7 +33,13 @@ fn_getPage = async (ctx, next) => {
 
 fn_getContent = async (ctx) => {
     try {
-        const content = await Content.findOne({pageID: ctx.params.pageID});
+        let pageId = ctx.request.query.pageID;
+        console.log(pageId);
+        const content = await Content.findOne({pageID: pageId});
+        if(!content) {
+            ctx.response.status = 400;
+            return ctx.response.body = {error: { msg: 'content does not exist'}};
+        }
         return content;
     }catch(err) {
         console.error(err.message);

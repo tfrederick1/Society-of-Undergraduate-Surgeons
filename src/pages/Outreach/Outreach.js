@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 export default class Outreach extends React.Component {
     constructor(props) {
@@ -9,7 +10,7 @@ export default class Outreach extends React.Component {
             imgPaths: [],
             isLoaded: false
         }
-        this.getMember = this.getMember.bind(this);
+        this.getContent = this.getContent.bind(this);
     }
 
     async getContent() {
