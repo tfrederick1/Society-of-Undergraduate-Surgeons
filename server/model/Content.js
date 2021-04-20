@@ -2,16 +2,16 @@ const mongoose = require('mongoose');
 const ContentSchema = mongoose.Schema({
    pageID: {
        type: Number,
-       unique: true,
        required: true
    },
-   title: {
-       type: String
+    title: {
+       type: String,
+       required: true
    },
-   subtitle: {
-      type: String
+   pageContent: {
+        type: [String],
+        required: true
    },
-   pageContent: [String],
    imgPaths: [String]
 })
 
