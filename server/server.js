@@ -11,7 +11,7 @@ const jwtUnless = require('./utils/jwtUnless');
 
 app = new koa();
 connectDB();
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 app.use(bodyParser());
 app.use(kCors({
     origin: 'http://localhost:3000',
