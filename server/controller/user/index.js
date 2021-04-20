@@ -148,46 +148,19 @@ fn_postMember = async (ctx, next) => {
 fn_postContent = async (ctx, next) => {
     try{
         const request = ctx.request.body;
-        const {pageID, title, pageContent, imgUpdate} = request;
+        const {pageID, title, pageContent} = request;
         const images = ctx.request.files.file;
         const imgPaths = [];
-        if(imgUpdate) {
-            for(let image of images) {
-                const reader = fs.createReadStream(image.path);
-                let filePath = path.join(__dirname, "/public/image") + `/${image.name}`;
-                const upStream = fs.createWriteStream(filePath);
-                reader.pipe(upStream);
-                imgPaths.push(filePath);
-            }
+        for(let image of images) {
+            const reader = fs.createReadStream(image.path);
+            let filePath = path.join(__dirname, "/public/image") + `/${image.name}`;
+            const upStream = fs.createWriteStream(filePath);
+            reader.pipe(upStream);
+            imgPaths.push(filePath);
         }
         let content = new Content({
             pageID,
             title,
-            pageContent,
-            imgPaths
-        });
-        await content.save();
-        return ctx.body = {
-            type: 'success',
-            msg: 'post success'
-        }
-    }catch(err) {
-        console.error(err.message);
-        ctx.response.status = err.status || 500;
-        ctx.response.message = err.message;
-    }
-}
-
-fn_postTest = async (ctx, next) => {
-    try{
-        const request = ctx.request.body;
-        const {pageID, title, subtitle, pageContent} = request;
-        const imgPaths = [];
-        
-        let content = new Content({
-            pageID,
-            title,
-            subtitle,
             pageContent,
             imgPaths
         });
@@ -232,8 +205,8 @@ fn_updateContent = async (ctx, next) => {
         const request = ctx.request.body;
         const {pageID, pageContent, imgUpdate, conUpdate} = request;
         
-        let images;
-        let imgPaths;
+        images;
+        imgPaths;
         if(imgUpdate) {
             images = ctx.request.files.file;
             imgPaths = [];
@@ -260,13 +233,11 @@ fn_updateContent = async (ctx, next) => {
     }
 }
 
-
 module.exports = {
     postRegister: fn_register,
     postLogin: fn_login,
     postMember: fn_postMember,
     postContent: fn_postContent,
     updateMember: fn_updateMember,
-    updateContent: fn_updateContent,
-    postTest: fn_postTest
+    updateContent: fn_updateContent
 }
